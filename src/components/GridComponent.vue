@@ -1,6 +1,7 @@
 <script setup>
 import { defineAsyncComponent, ref } from 'vue'
-
+import { useUserStore } from '../stores/userStore'
+const UserStore = useUserStore()
 const myFavNumber = ref()
 const SquareComponent = defineAsyncComponent({
   loader: () => import('./SquareComponent.vue')
@@ -16,17 +17,15 @@ function scrollToBlock(n) {
 
 <template>
   <div id="container">
-    <form>
+    <div class="form">
       <input
         placeholder="Nummer in gedachten?"
         v-model="myFavNumber"
         type="number"
         @change="scrollToBlock(myFavNumber)"
       />
-      <button type="submit" @click="scrollToBlock(myFavNumber)">
-        Scroll naar {{ myFavNumber }}
-      </button>
-    </form>
+      <button @click="scrollToBlock(myFavNumber)">Scroll naar {{ myFavNumber }}</button>
+    </div>
     <div id="wrapper">
       <div id="grid" ref="grid">
         <SquareComponent
@@ -49,7 +48,7 @@ export default {}
 #container {
   position: block;
 
-  form {
+  .form {
     display: flex;
     flex-direction: row;
 

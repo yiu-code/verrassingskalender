@@ -23,8 +23,8 @@ const router = createRouter({
 
 router.beforeEach(async (to, from) => {
   const UserStore = useUserStore()
-  if (UserStore.getName === '' && to.path !== '/') {
-    // redirect the user to the login page
+  console.log(UserStore.getName)
+  if (UserStore.getName === null && to.path !== '/') {
     return '/'
   }
 })

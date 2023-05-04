@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('User', {
   state: () => ({
-    name: '',
+    name: null,
     attempt: 1,
     chosenNumber: null
   }),
@@ -25,6 +25,9 @@ export const useUserStore = defineStore('User', {
     },
     addChosenNumer(num) {
       this.chosenNumber = num
+    },
+    addName(name) {
+      this.name = name
     }
   }
 })

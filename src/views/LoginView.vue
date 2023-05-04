@@ -5,8 +5,8 @@
       <p>U bent 1 van de gelukkige die een kans heeft om een extra prijs te winnen.</p>
       <div class="login">
         <label class="blue">Naam</label>
-        <input v-model="UserStore.name" type="text" placeholder="Vul hier uw naam" />
-        <button type="submit" @click="submit">Ga door</button>
+        <input v-model="UserStore.name" type="text" required placeholder="Vul hier uw naam" />
+        <button @click="submit">Ga door</button>
       </div>
     </div>
   </div>
@@ -18,7 +18,9 @@ import { useUserStore } from '../stores/userStore'
 const UserStore = useUserStore()
 
 function submit() {
-  router.push('/verrassingskalender')
+  if (UserStore.getName !== '') {
+    router.push('/verrassingskalender')
+  }
 }
 </script>
 

@@ -2,7 +2,7 @@
 import { usePrizeStore } from '../stores/prizeStore'
 import { useUserStore } from '../stores/userStore'
 
-import questionSign from '@/assets/question-sign.jpg'
+import questionSign from '@/assets/question-sign.svg'
 import prize0 from '@/assets/prize0.jpg'
 import prize1 from '@/assets/prize1.jpg'
 import prize2 from '@/assets/prize2.jpg'
