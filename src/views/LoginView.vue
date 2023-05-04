@@ -1,11 +1,11 @@
 <template>
   <div class="container flex">
     <div class="flex">
-      <h1>Welkom bij de verrassingskalender!</h1>
+      <h1 class="blue">Welkom bij de verrassingskalender!</h1>
       <p>U bent 1 van de gelukkige die een kans heeft om een extra prijs te winnen.</p>
       <div class="login">
-        <label>Naam</label>
-        <input v-model="UserStore.name" type="text" placeholder="Uw naam hier" />
+        <label class="blue">Naam</label>
+        <input v-model="UserStore.name" type="text" placeholder="Vul hier uw naam" />
         <button type="submit" @click="submit">Ga door</button>
       </div>
     </div>
@@ -39,13 +39,14 @@ function submit() {
   display: flex;
   flex-direction: column;
   align-items: start;
-  border: solid 2px rgba($color: #fff, $alpha: 0.5);
+  border: solid 2px rgba($color: #fff, $alpha: 0.7);
+  background-color: rgba($color: #fff, $alpha: 0.3);
   border-radius: 0.6em;
-  padding: 12px;
-  margin-top: 12px;
+  padding: 3em;
+  margin-top: 2em;
 
   > * {
-    margin: 5px 0;
+    margin: 5px 16px;
   }
 }
 </style>

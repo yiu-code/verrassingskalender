@@ -10,7 +10,7 @@ const GridComponent = defineAsyncComponent({
 <template>
   <div class="container">
     <div class="wrapper">
-      <h1>
+      <h1 class="blue">
         Welkom <span>{{ UserStore.getName }}</span
         >, bij de verrassingskalender!
       </h1>
@@ -32,26 +32,20 @@ const GridComponent = defineAsyncComponent({
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   padding: 3em 0;
-}
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
 
-.disclaimer {
-  margin: 12px 0;
-  font-weight: 700;
-}
-
-span {
-  color: #000;
-  font-weight: bold;
-  text-transform: capitalize;
+  .disclaimer {
+    margin: 12px 0;
+    font-weight: 700;
+  }
 }
 </style>

@@ -113,8 +113,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="wrapper">
-    <div class="container" @click="alertUser(props.prize)">
+  <div class="container">
+    <div class="wrapper" @click="alertUser(props.prize)">
       <canvas
         id="background"
         ref="canvas2"
@@ -131,7 +131,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.wrapper {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,27 +139,27 @@ onMounted(() => {
   font-size: 18px;
   font-weight: bold;
   margin: 4px;
-}
 
-.container {
-  position: relative;
-  width: 75px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-}
+  .wrapper {
+    position: relative;
+    width: 75px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
 
-#canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-}
+    #background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
 
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+  }
 }
 
 .red-border {

@@ -3,16 +3,10 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
+  padding: 2rem;
 
   font-weight: normal;
 }
-
-/* .container {
-  width: 100%;
-  margin: 0 auto;
-  aspect-ratio: 100 / 29;
-} */
 
 a,
 .blue {
@@ -28,19 +22,40 @@ a,
 }
 
 h1 {
-  color: #002f81;
   font-weight: 700;
 }
 
-/* @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.blue {
+  color: #002f81;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
+label {
+  font-weight: bold;
+}
+
+button {
+  height: 32px;
+  border: none;
+  color: #fff;
+  background-color: #002f81;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  padding: 8px 12px;
+}
+
+input {
+  height: 32px;
+  width: 124px;
+  color: #002f81;
+  background-color: #fff;
+  border-radius: 8px;
+  border: #ff5a00 solid 2px;
+}
+
+span {
+  color: #000;
+  font-weight: bold;
+  text-transform: capitalize;
+}
